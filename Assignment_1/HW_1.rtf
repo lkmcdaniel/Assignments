@@ -9,6 +9,9 @@
 * 1. There appear to be 4,623 orders\
 * 2. There were 553 orders for Chicken Burritos\
 * 3. There were 386 orders for Steak Burritos\
+* 4. Pinto Beans show up 105 times\
+* 5. Black beans show up 282 times\
+* 6. There are 15 occurrences of Dictionary\
 * The code I used is below:\
 \
 ``````\
@@ -20,6 +23,11 @@ grep -R Chicken Chipotle.tsv\
 find . *.*sv | wc -l\'a0 \'a0 276 TSV\'a0& CSV\'a0files\
 grep -R \'93Chicken Burrito\'94 Chipotle.tsv | wc -l\
 grep -R \'93Steak Burrito\'94 Chipotle.tsv | wc -l\'a0\
-grep -R \'93Chicken\'a0\
+grep -R \'93Chicken Burrito\'94\'a0Chipotle.tsv | grep -R \'93Pinto\'94 | wc -l\
+grep -R \'93Chicken Burrito\'94\'a0Chipotle.tsv | grep -R \'93Black Beans\'94 | wc -l\
+grep -ri \'93dictionary\'94 . | wc\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
 \
 `````}
